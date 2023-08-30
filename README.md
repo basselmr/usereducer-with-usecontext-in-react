@@ -1,2 +1,1 @@
-# useReducer-with-useContext-in-react
-useReducer with useContext in react
+This project is an example of using 'useReducer hook' with 'useContext hook' in React JS

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+
+
+
+
+
+
+
+
+/* center container in the middle */
+/*html {
+  display: grid;
+  min-height: 100%;
+}*/
+
+/*body {
+  display: grid;
+  background: #E0C9CB;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}*/
+
+.container {
+    flex: 1 0 400px;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  width: 500px;
+  height: 300px;
+  background: #F5F5F5;
+  box-shadow: 5px 5px 15px rgba(#BA7E7E, .5);
+  border-radius: 10px;
+}
+.container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  }
+
+p {
+  font-size: 0.6em;
+  color: #BA7E7E;
+  letter-spacing: 1px;
+}
+
+.container h1 {
+  font-size: 1em;
+  color: #4E4E4E;
+  margin-top: -5px;
+}
+
+.container h2 {
+  color: #C3A1A0;
+  margin-top: -5px;
+}
+
+.container img {
+  width: 140px;
+  height: 140px;
+  margin-top: 47px;
+}
+
+.slideshow-buttons {
+  top: 70%;
+  display: none;
+}
+
+
+.product {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 10%;
+  left: 45%;
+}
+
+.desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: #4E4E4E;
+  font-size: .7em;
+  line-height: 1.6em;
+  margin-right: 25px;
+  text-align: justify;
+}
+
+.buttons{
+    position:absolute;
+    width: 100%;
+    bottom: 50px;
+    right: 0px;
+    
+}
+ .buttons button { 
+  background: darken(#E0C9CB, 10%);
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a30101;
+  cursor: pointer;
+  &:hover {
+    background: #BA7E7E;
+    transition: all .4s ease-in-out;
+  }
+}
+
+.add {
+   
+  width: 77%;
+}
+
+.like {
+  width: 22%;
+}
+
+.sizes {
+  display: grid;
+  color: #D9AAB7;
+  grid-template-columns: repeat(auto-fill, 30px);
+  width: 60%;
+  grid-gap: 4px;
+  margin-left: 20px;
+  margin-top: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pick {
+  margin-top: 11px;
+  margin-bottom:0;
+  margin-left: 20px;
+}
+
+.size {
+  padding: 9px;
+  border: 1px solid #E0C9CB;
+  font-size: 0.7em;
+  text-align: center;
+  &:hover{
+    background: #BA7E7E;
+    color: #F5F5F5;
+    transition: all .4s ease-in-out;
+  }
+}
+
+.focus{
+  background: #BA7E7E;
+  color: #F5F5F5;
+}
+

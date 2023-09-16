@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css"
 import { useContext } from 'react';
-import { Cartprovider, CartContext } from '../contexts/CartContext';
+import { CartContext } from '../contexts/CartContext';
 
 
 
 const Header = () => {
     const [expand, setExpand] = useState("none")
-    const { Count } = useContext(CartContext)
+    const { Cart } = useContext(CartContext)
     const toggle = () => {
         if (expand === 'none') {
             setExpand('block')
@@ -36,7 +36,7 @@ const Header = () => {
                             <Link onClick={toggle} className="nav-link" to="/store">Store</Link>
                         </li>
                         <li className="nav-item">
-                            <Link onClick={toggle} className="nav-link" to="/cart">Cart {Count}</Link>
+                            <Link onClick={toggle} className="nav-link" to="/cart">Cart {Cart.count}</Link>
                         </li>
                     </ul>
                 </div>

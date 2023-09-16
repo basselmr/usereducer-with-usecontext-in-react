@@ -3,19 +3,21 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import("./style.css")
 const ProductCard = (props) => {
-    const { Count, setCount, cartItems, setCartItems } = useContext(CartContext)
+    //const { Count, setCount, CartItems, setCartItems, Cart, dispatch } = useContext(CartContext)
+    const { dispatch } = useContext(CartContext)
 
     const onclickHandler = () => {
-        setCount(Count + 1)
-        setCartItems([...cartItems, { id: props.id, title: props.title, price: props.Price, image: props.image }])
-        console.log(props.id)
+        //setCount(Count + 1)
+        //setCartItems([...CartItems, { id: props.id, title: props.title, price: props.Price, image: props.image }])
+        //console.log(props.id)
+        dispatch({ type: "addToCart", payload: { id: props.id, title: props.title, price: props.Price, image: props.image } })
     }
 
     return (
         <>
             <div className="container">
                 <div className="images">
-                    <img src={props.image} />
+                    <img src={props.image} alt="none" />
                 </div>
 
                 <div className="product">

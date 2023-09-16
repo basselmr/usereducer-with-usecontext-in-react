@@ -1,23 +1,21 @@
 import React from "react";
-import { useContext, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { ProductsContext } from "../contexts/ProductsContext";
 import ProductCard from "./ProductCard/ProductCard";
 
-
-
 const Store = () => {
     const { products, setProducts } = useContext(ProductsContext)
+    //const { products, setProducts } = useProducts()
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                setProducts(data)
+                //console.log(data);
+                setProducts(data);
+
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-
-
 
     return (
         <div style={{

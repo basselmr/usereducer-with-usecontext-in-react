@@ -20,6 +20,7 @@ const Cart = () => {
                             ID :{itm.id}
                             title: {itm.title}
                             Price: {itm.price}
+                            QTY : {itm.qty}
                         </div>
                     </div>
                 })

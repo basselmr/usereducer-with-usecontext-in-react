@@ -1,13 +1,27 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
+//import { type } from "@testing-library/user-event/dist/type";
 //import { Button } from "bootstrap";
 
 
 
 const Cart = () => {
     //const { Count, CartItems } = useContext(CartContext)
-    const { Cart } = useContext(CartContext)
+    const { Cart, dispatch } = useContext(CartContext)
+    const IncrementOnClickHandler = (ItmID) => {
+        dispatch({ type: "QTY_Increment", payload: ItmID })
+
+    }
+    const DecrementOnClickHandler = (ItmID) => {
+        dispatch({ type: "QTY_Decrement", payload: ItmID })
+
+    }
+    const DeleteOnClickHandler = (ItmID, ItmQty) => {
+        dispatch({ type: "removeFromCart", payload: { ItemId: ItmID, ItemQTY: ItmQty } })
+    }
+
+
 
     return (
         <>
@@ -20,7 +34,15 @@ const Cart = () => {
                             ID :{itm.id}
                             title: {itm.title}
                             Price: {itm.price}
-                            QTY : {itm.qty}
+
+                        </div>
+                        <div style={{ display: "inline" }}>
+                            <button style={{ display: "inline" }} onClick={() => IncrementOnClickHandler(itm.id)} >+</button>
+                            <div style={{ display: "inline" }}>QTY : {itm.qty}</div>
+                            <button onClick={() => DecrementOnClickHandler(itm.id)} >-</button>
+                        </div>
+                        <div>
+                            <button onClick={() => DeleteOnClickHandler(itm.id, itm.qty)}>DELETE</button>
                         </div>
                     </div>
                 })

@@ -5,7 +5,6 @@ import("./style.css")
 const ProductCard = (props) => {
     //const { Count, setCount, CartItems, setCartItems, Cart, dispatch } = useContext(CartContext)
     const { dispatch } = useContext(CartContext)
-
     const onclickHandler = () => {
         //setCount(Count + 1)
         //setCartItems([...CartItems, { id: props.id, title: props.title, price: props.Price, image: props.image }])
@@ -19,7 +18,6 @@ const ProductCard = (props) => {
                 <div className="images">
                     <img src={props.image} alt="none" />
                 </div>
-
                 <div className="product">
                     <p>{props.Category}</p>
                     <h1>{props.title}</h1>
@@ -31,10 +29,8 @@ const ProductCard = (props) => {
                     </div>
                 </div>
             </div>
-
-
         </>
     )
-
 }
+
 export default ProductCard

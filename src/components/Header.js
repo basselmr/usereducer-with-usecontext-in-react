@@ -5,8 +5,6 @@ import "bootstrap/dist/css/bootstrap.css"
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
-
-
 const Header = () => {
     const [expand, setExpand] = useState("none")
     const { Cart } = useContext(CartContext)
@@ -16,11 +14,9 @@ const Header = () => {
         } else {
             setExpand('none')
         }
-
     }
 
     return (
-
         < header className='p-5' style={{ direction: 'rtl' }
         }>
             <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light" >

@@ -12,7 +12,6 @@ const Store = () => {
             .then(data => {
                 //console.log(data);
                 setProducts(data);
-
             })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

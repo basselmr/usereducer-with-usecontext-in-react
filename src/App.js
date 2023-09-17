@@ -8,15 +8,10 @@ import Cart from "./components/Cart";
 import { Productsprovider } from "./contexts/ProductsContext.js"
 import { Cartprovider } from "./contexts/CartContext";
 
-
-
 function App() {
-
   return (
     <>
-
       <BrowserRouter>
-
         <Cartprovider>
           <Header />
           <Productsprovider>
@@ -27,8 +22,6 @@ function App() {
             </Routes>
           </Productsprovider>
         </Cartprovider>
-
-
       </BrowserRouter>
     </>
   );
